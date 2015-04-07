@@ -1,0 +1,13 @@
+The following example shows how to define SQL_TEXT and include the sqltypes_td.h header file in the file that defines a UDF:
+   #define  SQL_TEXT Latin_Text
+   #include "sqltypes_td.h"
+
+This section describes the different functions that you need to define when you create a simple UDF. They are use to 
+initialize the variables and link them together I believed. 
+long long xxx(UDF_INIT *initid, UDF_ARGS *args,
+              char *is_null, char *error);
+
+double xxx(UDF_INIT *initid, UDF_ARGS *args,
+              char *is_null, char *error);
+
+The site I used for WINDOWS platform is dev.mysql.com and teredata
